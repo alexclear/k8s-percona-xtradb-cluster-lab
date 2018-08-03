@@ -13,3 +13,6 @@
 [submodule "ansible/roles/k8s-ext-storage-local-volume-provisioner"]
 	path = ansible/roles/k8s-ext-storage-local-volume-provisioner
 	url = https://github.com/kofonfor/ansible-role-k8s-ext-storage-local-volume-provisioner.git
+[submodule "ansible/roles/k8s-wordpress"]
+	path = ansible/roles/k8s-wordpress
+	url = https://github.com/kofonfor/ansible-role-k8s-wordpress.git

@@ -11,3 +11,4 @@
   - role: helm
   - { role: k8s-namespace, k8s_namespace: "percona" }
   - { role: k8s-percona-xtradb-cluster, k8s_namespace: "percona", percona_xtradb_helm_release: "percona", percona_xtradb_root_password: "p@ssw0rd" }
+  - { role: k8s-wordpress, k8s_namespace: "percona", wordpress_helm_release: "wordpress" }
