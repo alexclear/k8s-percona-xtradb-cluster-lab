@@ -10,3 +10,6 @@
 [submodule "ansible/roles/k8s-percona-xtradb-cluster"]
 	path = ansible/roles/k8s-percona-xtradb-cluster
 	url = https://github.com/kofonfor/ansible-role-k8s-percona-xtradb-cluster.git
+[submodule "ansible/roles/k8s-ext-storage-local-volume-provisioner"]
+	path = ansible/roles/k8s-ext-storage-local-volume-provisioner
+	url = https://github.com/kofonfor/ansible-role-k8s-ext-storage-local-volume-provisioner.git

@@ -1,0 +1,12 @@
+k8s_local_storage_pv_names:
+  - pv1
+  - pv2
+  - pv3
+  - pv4
+  - pv5
+  - pv6
+  - pv7
+  - pv8
+  - pv9
+storage_class_name: local-disks
+local_volume_provisioner_enabled: true
