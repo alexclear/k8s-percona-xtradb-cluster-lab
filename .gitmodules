@@ -1,0 +1,12 @@
+[submodule "ansible/kubespray"]
+	path = ansible/kubespray
+	url = https://github.com/kubernetes-incubator/kubespray.git
+[submodule "ansible/roles/helm"]
+	path = ansible/roles/helm
+	url = https://github.com/kofonfor/ansible-role-helm.git
+[submodule "ansible/roles/k8s-namespace"]
+	path = ansible/roles/k8s-namespace
+	url = https://github.com/kofonfor/ansible-role-k8s-namespace.git
+[submodule "ansible/roles/k8s-percona-xtradb-cluster"]
+	path = ansible/roles/k8s-percona-xtradb-cluster
+	url = https://github.com/kofonfor/ansible-role-k8s-percona-xtradb-cluster.git

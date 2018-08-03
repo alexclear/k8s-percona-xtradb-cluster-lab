@@ -1,0 +1,37 @@
+[kube1]
+kube1 ansible_host=172.16.137.2 access_ip=172.16.137.2 ip=172.16.137.2
+
+[kube2]
+kube2 ansible_host=172.16.137.3 access_ip=172.16.137.3 ip=172.16.137.3
+
+[kube3]
+kube3 ansible_host=172.16.137.4 access_ip=172.16.137.4 ip=172.16.137.4
+
+[kube-node:children]
+kube1
+kube2
+kube3
+
+[kube-master:children]
+kube1
+kube2
+
+[etcd:children]
+kube1
+kube2
+kube3
+
+[vault:children]
+kube1
+kube2
+kube3
+
+[k8s-cluster:children]
+kube1
+kube2
+kube3
+
+[kubespray:children]
+kube1
+kube2
+kube3
