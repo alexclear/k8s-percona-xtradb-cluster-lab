@@ -8,5 +8,5 @@ k8s_local_storage_pv_names:
   - pv7
   - pv8
   - pv9
-storage_class_name: local-disks
+storage_class_name: local-storage
 local_volume_provisioner_enabled: true

@@ -1,17 +1,17 @@
-- name: create /var/lib/k8s/{{ storage_class_name }}-orig
-  file: dest=/var/lib/k8s/{{ storage_class_name }} state=directory
+- name: create /mnt/disks-orig
+  file: dest=/mnt/disks-orig state=directory
 
-- name: create /var/lib/k8s/{{ storage_class_name }} volumes
-  file: dest=/var/lib/k8s/{{ storage_class_name }}-orig/{{ item }} state=directory
+- name: create /mnt/disks-orig volumes
+  file: dest=/mnt/disks-orig/{{ item }} state=directory
   with_items: "{{ k8s_local_storage_pv_names }}"
 
-- name: create /var/lib/k8s/{{ storage_class_name }}
-  file: dest=/var/lib/k8s/{{ storage_class_name }} state=directory
+- name: create /mnt/disks
+  file: dest=/mnt/disks state=directory
 
-- name: create /var/lib/k8s/{{ storage_class_name }} volumes
-  file: dest=/var/lib/k8s/{{ storage_class_name }}/{{ item }} state=directory
+- name: create /mnt/disks volumes
+  file: dest=/mnt/disks/{{ item }} state=directory
   with_items: "{{ k8s_local_storage_pv_names }}"
 
 - name: create a bind mount
-  shell: mount --bind /var/lib/k8s/{{ storage_class_name }}-orig/{{ item }} /var/lib/k8s/{{ storage_class_name }}/{{ item }}
+  shell: mount --bind /mnt/disks-orig/{{ item }} /mnt/disks/{{ item }}
   with_items: "{{ k8s_local_storage_pv_names }}"
