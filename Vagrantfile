@@ -13,7 +13,7 @@ ANSIBLE_RAW_SSH_ARGS << " -o IdentityFile=./.vagrant/machines/kube3/virtualbox/p
 
 Vagrant.configure("2") do |config|
   config.vm.define "kube1" do |kube1|
-    kube1.vm.box = "ubuntu/xenial64"
+    kube1.vm.box = "ubuntu/bionic64"
     kube1.vm.hostname = "kube1"
     kube1.vm.network "private_network", ip: $KUBE1_IP
 
@@ -29,7 +29,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "kube2" do |kube2|
-    kube2.vm.box = "ubuntu/xenial64"
+    kube2.vm.box = "ubuntu/bionic64"
     kube2.vm.hostname = "kube2"
     kube2.vm.network "private_network", ip: $KUBE2_IP
 
@@ -45,7 +45,7 @@ Vagrant.configure("2") do |config|
   end
 
   config.vm.define "kube3" do |kube3|
-    kube3.vm.box = "ubuntu/xenial64"
+    kube3.vm.box = "ubuntu/bionic64"
     kube3.vm.hostname = "kube3"
     kube3.vm.network "private_network", ip: $KUBE3_IP
 
