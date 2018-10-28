@@ -13,5 +13,5 @@
   with_items: "{{ k8s_local_storage_pv_names }}"
 
 - name: create a bind mount
-  shell: mount --bind /mnt/disks-orig/{{ item }} /mnt/disks/{{ item }}
+  mount: path=/mnt/disks/{{ item }} src=/mnt/disks-orig/{{ item }} state=mounted fstype=none opts="rw,bind"
   with_items: "{{ k8s_local_storage_pv_names }}"
